@@ -35,7 +35,8 @@ export async function loadCards(containerSelector, cardIds = []){
             .replace("{{icon2}}",card.icon2)
             .replace("{{description}}",card.description);
 
-            container.innerHTML += html;
+            // container.innerHTML += html;
+            container.insertAdjacentHTML("beforeend", html);
             
         });
     }catch(error){
